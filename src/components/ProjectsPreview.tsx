@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, FileCheck, Users, Zap, LineChart, BarChart, FileText } from 'lucide-react';
+import { ArrowRight, FileText, Users, LineChart } from 'lucide-react';
 
 const ProjectsPreview = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -56,45 +56,55 @@ const ProjectsPreview = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="section-container">
-      <div className="text-center mb-16">
-        <h2 className="text-sm uppercase tracking-wider text-steelblue mb-2">Experience</h2>
-        <h3 className="text-3xl md:text-4xl font-bold mb-4">Professional Journey</h3>
-        <div className="h-1 w-16 bg-steelblue mx-auto"></div>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {featuredProjects.map((project) => (
-          <div 
-            key={project.id} 
-            className="project-card group"
-          >
-            <div className="flex justify-between items-start mb-4">
-              <div className="p-3 rounded-md bg-gray-50">
-                {project.icon}
+    <section ref={sectionRef} className="py-20 md:py-32">
+      <div className="container mx-auto px-4 md:px-10">
+        <div className="mb-16">
+          <div className="section-heading-small">Experience</div>
+          <h2 className="section-heading relative">
+            <span className="large-number absolute -top-14 -left-6 opacity-10">03</span>
+            <span className="relative z-10">Professional Journey</span>
+          </h2>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {featuredProjects.map((project, index) => (
+            <div 
+              key={project.id} 
+              className="project-card group"
+              style={{ 
+                transitionDelay: `${index * 0.1}s` 
+              }}
+            >
+              <div className="flex justify-between items-start mb-6">
+                <div className="p-3 rounded-md bg-gray-50">
+                  {project.icon}
+                </div>
+              </div>
+              <h4 className="text-xl font-medium mb-3">{project.title}</h4>
+              <p className="text-muted-foreground mb-5">{project.description}</p>
+              <div className="bg-steelblue/10 text-steelblue px-3 py-1 rounded-full text-sm inline-block mb-5">
+                {project.outcome}
+              </div>
+              <div className="mt-auto pt-4 border-t border-gray-100">
+                <Link 
+                  to={`/projects#project-${project.id}`} 
+                  className="inline-flex items-center text-steelblue group-hover:underline"
+                >
+                  View Details <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </div>
-            <h4 className="text-xl font-medium mb-2">{project.title}</h4>
-            <p className="text-muted-foreground mb-4">{project.description}</p>
-            <div className="bg-steelblue/10 text-steelblue px-3 py-1 rounded-full text-sm inline-block mb-4">
-              {project.outcome}
-            </div>
-            <div className="mt-2 pt-2 border-t border-gray-100">
-              <Link 
-                to={`/projects#project-${project.id}`} 
-                className="inline-flex items-center text-steelblue hover:underline"
-              >
-                View Details <ArrowRight size={16} className="ml-1" />
-              </Link>
-            </div>
-          </div>
-        ))}
-      </div>
-      
-      <div className="text-center mt-12">
-        <Link to="/projects" className="btn-primary">
-          View Full Experience
-        </Link>
+          ))}
+        </div>
+        
+        <div className="text-center mt-16">
+          <Link to="/projects" className="btn-primary group inline-flex items-center">
+            View Full Experience
+            <svg className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Link>
+        </div>
       </div>
     </section>
   );

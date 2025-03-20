@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -49,6 +49,7 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+    font-family: 'Space Grotesk', sans-serif;
   }
 
   .glass {
@@ -87,11 +88,36 @@
   }
   
   .skill-bar {
-    @apply h-2 bg-gray-200 rounded-full overflow-hidden;
+    @apply h-1 bg-gray-200 rounded-full overflow-hidden;
   }
   
   .skill-progress {
     @apply h-full bg-steelblue transition-all duration-1000 ease-out;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-medium tracking-tight mb-10;
+  }
+
+  .section-heading-small {
+    @apply text-sm uppercase tracking-wider text-steelblue mb-2 font-medium;
+  }
+
+  .split-text-container {
+    @apply overflow-hidden relative;
+  }
+
+  .split-text {
+    @apply relative inline-block transform transition-transform duration-700 ease-out;
+    transform: translateY(100%);
+  }
+
+  .visible .split-text {
+    transform: translateY(0);
+  }
+
+  .highlight {
+    @apply text-steelblue;
   }
 }
 
@@ -104,4 +130,28 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes slideInHorizontal {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-horizontal {
+  animation: slideInHorizontal 0.8s ease-out forwards;
+}
+
+.large-number {
+  @apply text-7xl md:text-8xl font-bold text-steelblue/10 absolute -top-10 -left-4 select-none z-0;
+}
+
+.cursor-dot {
+  @apply fixed w-4 h-4 rounded-full bg-steelblue/50 pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2 mix-blend-difference;
+  transition: transform 0.2s ease-out;
 }

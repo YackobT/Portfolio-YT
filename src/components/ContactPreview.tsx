@@ -29,46 +29,51 @@ const ContactPreview = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="section-container bg-steelblue text-white">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8">Ready to Optimize Your Business?</h2>
-        <p className="text-lg mb-8 text-white/90">
-          Let's discuss how my expertise in business analysis, process optimization, 
-          and system implementation can help your organization achieve its goals.
-        </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
-          <div className="glass bg-white/10 p-6 rounded-lg">
-            <Mail className="mx-auto mb-4" size={28} />
-            <h3 className="text-lg font-medium mb-2">Email</h3>
-            <p className="text-white/80">contact@example.com</p>
+    <section ref={sectionRef} className="py-20 md:py-32 bg-steelblue text-white">
+      <div className="container mx-auto px-4 md:px-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-6">Ready to Optimize Your Business?</h2>
+          <p className="text-lg mb-12 text-white/90 max-w-2xl mx-auto">
+            Let's discuss how my expertise in business analysis, process optimization, 
+            and system implementation can help your organization achieve its goals.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+            <div className="glass bg-white/10 p-6 rounded-lg transition-transform hover:translate-y-[-5px] duration-300">
+              <Mail className="mx-auto mb-4" size={28} />
+              <h3 className="text-lg font-medium mb-2">Email</h3>
+              <p className="text-white/80">contact@example.com</p>
+            </div>
+            
+            <div className="glass bg-white/10 p-6 rounded-lg transition-transform hover:translate-y-[-5px] duration-300">
+              <Phone className="mx-auto mb-4" size={28} />
+              <h3 className="text-lg font-medium mb-2">Phone</h3>
+              <p className="text-white/80">+1 (555) 123-4567</p>
+            </div>
+            
+            <div className="glass bg-white/10 p-6 rounded-lg transition-transform hover:translate-y-[-5px] duration-300">
+              <MapPin className="mx-auto mb-4" size={28} />
+              <h3 className="text-lg font-medium mb-2">Location</h3>
+              <p className="text-white/80">Richmond, VA</p>
+            </div>
+            
+            <div className="glass bg-white/10 p-6 rounded-lg transition-transform hover:translate-y-[-5px] duration-300">
+              <FileText className="mx-auto mb-4" size={28} />
+              <h3 className="text-lg font-medium mb-2">Resume</h3>
+              <a href="#" className="text-white/80 hover:text-white hover:underline">Download PDF</a>
+            </div>
           </div>
           
-          <div className="glass bg-white/10 p-6 rounded-lg">
-            <Phone className="mx-auto mb-4" size={28} />
-            <h3 className="text-lg font-medium mb-2">Phone</h3>
-            <p className="text-white/80">+1 (555) 123-4567</p>
-          </div>
-          
-          <div className="glass bg-white/10 p-6 rounded-lg">
-            <MapPin className="mx-auto mb-4" size={28} />
-            <h3 className="text-lg font-medium mb-2">Location</h3>
-            <p className="text-white/80">Richmond, VA</p>
-          </div>
-          
-          <div className="glass bg-white/10 p-6 rounded-lg">
-            <FileText className="mx-auto mb-4" size={28} />
-            <h3 className="text-lg font-medium mb-2">Resume</h3>
-            <a href="#" className="text-white/80 hover:text-white hover:underline">Download PDF</a>
-          </div>
+          <Link 
+            to="/contact" 
+            className="px-8 py-3 bg-white text-steelblue rounded-md transition-all duration-300 hover:bg-opacity-90 inline-block font-medium group"
+          >
+            Get in Touch
+            <svg className="ml-2 w-4 h-4 inline-block transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Link>
         </div>
-        
-        <Link 
-          to="/contact" 
-          className="px-8 py-3 bg-white text-steelblue rounded-md transition-all duration-300 hover:bg-opacity-90 inline-block font-medium"
-        >
-          Get in Touch
-        </Link>
       </div>
     </section>
   );

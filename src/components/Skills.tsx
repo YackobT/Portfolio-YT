@@ -51,54 +51,63 @@ const Skills = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="section-container bg-gray-50">
-      <div className="text-center mb-16">
-        <h2 className="text-sm uppercase tracking-wider text-steelblue mb-2">Expertise</h2>
-        <h3 className="text-3xl md:text-4xl font-bold mb-4">Skills & Proficiencies</h3>
-        <div className="h-1 w-16 bg-steelblue mx-auto"></div>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div className="space-y-8">
-          <h4 className="text-xl font-medium mb-6">Technical Skills</h4>
-          {technicalSkills.map((skill, index) => (
-            <div key={`tech-${index}`} className="space-y-2">
-              <div className="flex justify-between">
-                <span>{skill.name}</span>
-                <span className="text-steelblue">{skill.level}%</span>
-              </div>
-              <div className="skill-bar">
-                <div 
-                  className="skill-progress"
-                  style={{ 
-                    width: isVisible ? `${skill.level}%` : '0%',
-                    transition: `width 1s ease-out ${index * 0.2}s`
-                  }}
-                ></div>
-              </div>
+    <section ref={sectionRef} className="py-20 md:py-32 bg-gray-50">
+      <div className="container mx-auto px-4 md:px-10">
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-16">
+            <div className="section-heading-small">Expertise</div>
+            <h2 className="section-heading">Skills & Proficiencies</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div className="space-y-8">
+              <h4 className="text-xl font-medium tracking-tight mb-6 relative">
+                <span className="large-number">01</span>
+                <span className="relative z-10">Technical Skills</span>
+              </h4>
+              {technicalSkills.map((skill, index) => (
+                <div key={`tech-${index}`} className="space-y-2">
+                  <div className="flex justify-between">
+                    <span className="font-medium">{skill.name}</span>
+                    <span className="text-steelblue">{skill.level}%</span>
+                  </div>
+                  <div className="skill-bar">
+                    <div 
+                      className="skill-progress"
+                      style={{ 
+                        width: isVisible ? `${skill.level}%` : '0%',
+                        transition: `width 1s ease-out ${index * 0.2}s`
+                      }}
+                    ></div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        
-        <div className="space-y-8">
-          <h4 className="text-xl font-medium mb-6">Business Skills</h4>
-          {businessSkills.map((skill, index) => (
-            <div key={`biz-${index}`} className="space-y-2">
-              <div className="flex justify-between">
-                <span>{skill.name}</span>
-                <span className="text-steelblue">{skill.level}%</span>
-              </div>
-              <div className="skill-bar">
-                <div 
-                  className="skill-progress"
-                  style={{ 
-                    width: isVisible ? `${skill.level}%` : '0%',
-                    transition: `width 1s ease-out ${index * 0.2}s`
-                  }}
-                ></div>
-              </div>
+            
+            <div className="space-y-8">
+              <h4 className="text-xl font-medium tracking-tight mb-6 relative">
+                <span className="large-number">02</span>
+                <span className="relative z-10">Business Skills</span>
+              </h4>
+              {businessSkills.map((skill, index) => (
+                <div key={`biz-${index}`} className="space-y-2">
+                  <div className="flex justify-between">
+                    <span className="font-medium">{skill.name}</span>
+                    <span className="text-steelblue">{skill.level}%</span>
+                  </div>
+                  <div className="skill-bar">
+                    <div 
+                      className="skill-progress"
+                      style={{ 
+                        width: isVisible ? `${skill.level}%` : '0%',
+                        transition: `width 1s ease-out ${index * 0.2}s`
+                      }}
+                    ></div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

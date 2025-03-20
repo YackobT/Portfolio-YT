@@ -29,19 +29,20 @@ const Navbar = () => {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled ? 'py-3 bg-white/90 backdrop-blur-md shadow-sm' : 'py-5 bg-transparent'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
+        isScrolled ? 'py-3 bg-white/90 backdrop-blur-md shadow-sm' : 'py-6 bg-transparent'
       )}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
-        <Link to="/" className="text-xl font-semibold text-foreground transition-colors duration-300 hover:text-steelblue">
-          <span className="text-steelblue">Certified</span>Analyst
+      <div className="container mx-auto px-4 md:px-10 flex items-center justify-between">
+        <Link to="/" className="text-xl font-medium tracking-tight transition-colors duration-300 hover:text-steelblue flex items-center">
+          <span className="text-steelblue font-bold mr-1">Certified</span>
+          <span>Analyst</span>
         </Link>
 
         {isMobile ? (
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="text-foreground p-2"
+            className="text-foreground p-2 focus:outline-none"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -70,21 +71,21 @@ const Navbar = () => {
         {isMobile && (
           <div 
             className={cn(
-              'absolute top-full left-0 right-0 bg-white shadow-md transform transition-transform duration-300 ease-in-out',
-              mobileMenuOpen ? 'translate-y-0' : '-translate-y-full opacity-0'
+              'absolute top-full left-0 right-0 bg-white shadow-md transform transition-all duration-500 ease-in-out',
+              mobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
             )}
           >
             <nav className="flex flex-col py-4">
-              <Link to="/" className={cn('px-6 py-3 hover:bg-gray-100', isActive('/') && 'text-steelblue')}>
+              <Link to="/" className={cn('px-6 py-3 hover:bg-gray-50', isActive('/') && 'text-steelblue')}>
                 Home
               </Link>
-              <Link to="/projects" className={cn('px-6 py-3 hover:bg-gray-100', isActive('/projects') && 'text-steelblue')}>
+              <Link to="/projects" className={cn('px-6 py-3 hover:bg-gray-50', isActive('/projects') && 'text-steelblue')}>
                 Experience
               </Link>
-              <Link to="/contact" className={cn('px-6 py-3 hover:bg-gray-100', isActive('/contact') && 'text-steelblue')}>
+              <Link to="/contact" className={cn('px-6 py-3 hover:bg-gray-50', isActive('/contact') && 'text-steelblue')}>
                 Contact
               </Link>
-              <a href="#" className={cn('px-6 py-3 hover:bg-gray-100 flex items-center')}>
+              <a href="#" className={cn('px-6 py-3 hover:bg-gray-50 flex items-center')}>
                 <FileText size={16} className="mr-2" /> Resume
               </a>
             </nav>
