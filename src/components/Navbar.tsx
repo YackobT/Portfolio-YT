@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, FileText } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/hooks/use-mobile';
 
@@ -30,12 +30,12 @@ const Navbar = () => {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled ? 'py-3 bg-white/80 backdrop-blur-md shadow-sm' : 'py-5 bg-transparent'
+        isScrolled ? 'py-3 bg-white/90 backdrop-blur-md shadow-sm' : 'py-5 bg-transparent'
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         <Link to="/" className="text-xl font-semibold text-foreground transition-colors duration-300 hover:text-steelblue">
-          <span className="text-steelblue">Data</span>Analyst
+          <span className="text-steelblue">Certified</span>Analyst
         </Link>
 
         {isMobile ? (
@@ -52,11 +52,17 @@ const Navbar = () => {
               Home
             </Link>
             <Link to="/projects" className={cn('nav-link', isActive('/projects') && 'active')}>
-              Projects
+              Experience
             </Link>
             <Link to="/contact" className={cn('nav-link', isActive('/contact') && 'active')}>
               Contact
             </Link>
+            <a 
+              href="#" 
+              className="px-4 py-2 border border-steelblue text-steelblue rounded-md hover:bg-steelblue hover:text-white transition-colors duration-300 inline-flex items-center"
+            >
+              <FileText size={16} className="mr-2" /> Resume
+            </a>
           </nav>
         )}
 
@@ -73,11 +79,14 @@ const Navbar = () => {
                 Home
               </Link>
               <Link to="/projects" className={cn('px-6 py-3 hover:bg-gray-100', isActive('/projects') && 'text-steelblue')}>
-                Projects
+                Experience
               </Link>
               <Link to="/contact" className={cn('px-6 py-3 hover:bg-gray-100', isActive('/contact') && 'text-steelblue')}>
                 Contact
               </Link>
+              <a href="#" className={cn('px-6 py-3 hover:bg-gray-100 flex items-center')}>
+                <FileText size={16} className="mr-2" /> Resume
+              </a>
             </nav>
           </div>
         )}

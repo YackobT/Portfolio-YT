@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface ProjectDetailProps {
@@ -11,6 +11,7 @@ interface ProjectDetailProps {
   solution: string;
   results: string[];
   tools: string[];
+  date?: string;
   image?: string;
 }
 
@@ -22,6 +23,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
   solution,
   results,
   tools,
+  date,
   image
 }) => {
   const projectRef = useRef<HTMLDivElement>(null);
@@ -36,7 +38,16 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
     <div id={`project-${id}`} ref={projectRef} className="mb-20 opacity-0">
       <div className="bg-white rounded-lg shadow-sm overflow-hidden">
         <div className="p-8">
-          <h3 className="text-2xl font-bold mb-4">{title}</h3>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+            <h3 className="text-2xl font-bold">{title}</h3>
+            {date && (
+              <div className="flex items-center mt-2 md:mt-0 text-muted-foreground">
+                <Calendar size={16} className="mr-1" />
+                <span className="text-sm">{date}</span>
+              </div>
+            )}
+          </div>
+          
           <p className="text-lg text-muted-foreground mb-6">{description}</p>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
@@ -51,7 +62,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
           </div>
           
           <div className="mb-8">
-            <h4 className="text-xl font-medium mb-3">Results</h4>
+            <h4 className="text-xl font-medium mb-3">Results & Achievements</h4>
             <ul className="list-disc pl-5 space-y-1">
               {results.map((result, index) => (
                 <li key={index} className="text-muted-foreground">{result}</li>
@@ -73,7 +84,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
             </Link>
             
             <a href="#" className="inline-flex items-center text-steelblue hover:underline">
-              Case Study <ExternalLink size={16} className="ml-1" />
+              View Details <ExternalLink size={16} className="ml-1" />
             </a>
           </div>
         </div>

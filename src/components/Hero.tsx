@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, BadgeCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
@@ -39,20 +39,24 @@ const Hero = () => {
       </div>
       
       <div className="section-container relative z-10 flex flex-col items-center justify-center text-center">
+        <div className="flex items-center gap-2 bg-steelblue/10 px-4 py-2 rounded-full mb-6">
+          <BadgeCheck size={18} className="text-steelblue" />
+          <span className="text-sm font-medium">Certified Scrum Master</span>
+        </div>
+        
         <h1 
           ref={titleRef}
           className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 opacity-0 text-balance"
         >
-          Transforming <span className="text-steelblue">Data</span> into
-          <br /> Business <span className="text-steelblue">Decisions</span>
+          Driving <span className="text-steelblue">Business</span> Transformation
+          <br /> Through <span className="text-steelblue">Data</span> & <span className="text-steelblue">Analysis</span>
         </h1>
         
         <p 
           ref={subtitleRef}
           className="max-w-2xl mx-auto text-lg text-muted-foreground mb-10 opacity-0 text-balance"
         >
-          Business analyst specialized in delivering data-driven insights, process optimization, 
-          and strategic solutions to drive organizational success.
+          Impact-focused business systems analyst with 5+ years of experience crafting solutions that cut process times by 20% and boost efficiency.
         </p>
         
         <div 

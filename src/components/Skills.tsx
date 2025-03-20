@@ -11,21 +11,21 @@ const Skills = () => {
   const sectionRef = useRef<HTMLElement>(null);
   
   const technicalSkills: Skill[] = [
-    { name: 'Data Analysis', level: 95 },
-    { name: 'SQL', level: 90 },
-    { name: 'Excel/Spreadsheets', level: 95 },
-    { name: 'Tableau', level: 85 },
-    { name: 'Python', level: 75 },
-    { name: 'Power BI', level: 85 }
+    { name: 'JIRA & Agile Tools', level: 95 },
+    { name: 'SQL', level: 85 },
+    { name: 'Microsoft Visio', level: 90 },
+    { name: 'Trello', level: 95 },
+    { name: 'SharePoint', level: 85 },
+    { name: 'AWS', level: 75 }
   ];
   
   const businessSkills: Skill[] = [
-    { name: 'Requirements Gathering', level: 90 },
-    { name: 'Process Optimization', level: 85 },
-    { name: 'Stakeholder Management', level: 90 },
-    { name: 'Project Management', level: 80 },
-    { name: 'Strategic Planning', level: 85 },
-    { name: 'Business Process Modeling', level: 90 }
+    { name: 'Requirements Analysis', level: 95 },
+    { name: 'Process Optimization', level: 90 },
+    { name: 'Stakeholder Management', level: 95 },
+    { name: 'Agile & Scrum', level: 90 },
+    { name: 'Workflow Design', level: 85 },
+    { name: 'System Integration', level: 80 }
   ];
   
   useEffect(() => {

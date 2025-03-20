@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { AreaChart, Activity, Database, Briefcase, LineChart } from 'lucide-react';
+import { CheckCircle, Briefcase, Award, Gauge, Users, BarChart } from 'lucide-react';
 
 const About = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -31,61 +31,85 @@ const About = () => {
     <section id="about" ref={sectionRef} className="section-container">
       <div className="text-center mb-16">
         <h2 className="text-sm uppercase tracking-wider text-steelblue mb-2">About Me</h2>
-        <h3 className="text-3xl md:text-4xl font-bold mb-4">Data-Driven Problem Solver</h3>
+        <h3 className="text-3xl md:text-4xl font-bold mb-4">Problem Solver & Efficiency Expert</h3>
         <div className="h-1 w-16 bg-steelblue mx-auto"></div>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <p className="text-lg leading-relaxed">
-            As a business analyst with over 8 years of experience, I specialize in transforming complex data into clear, actionable insights that drive strategic decision-making and business growth.
+            As a Certified Scrum Master Business Analyst with over 5 years of experience, I specialize in creating solutions that streamline processes, enhance efficiency, and align with business objectives.
           </p>
           <p className="text-lg leading-relaxed">
-            My expertise spans data analysis, process optimization, requirements gathering, and implementing solutions that align with business objectives and deliver measurable results.
+            My expertise spans the entire project lifecycle—from requirements gathering and analysis to implementation and validation—with a focus on stakeholder collaboration and Agile methodologies.
           </p>
           <div className="grid grid-cols-2 gap-4 mt-8">
             <div className="flex items-center space-x-3">
-              <AreaChart className="text-steelblue" size={24} />
-              <span>Data Analysis</span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <Activity className="text-steelblue" size={24} />
+              <Gauge className="text-steelblue" size={24} />
               <span>Process Optimization</span>
             </div>
             <div className="flex items-center space-x-3">
-              <Database className="text-steelblue" size={24} />
-              <span>Data Modeling</span>
+              <Users className="text-steelblue" size={24} />
+              <span>Stakeholder Collaboration</span>
             </div>
             <div className="flex items-center space-x-3">
-              <LineChart className="text-steelblue" size={24} />
-              <span>Business Intelligence</span>
+              <Award className="text-steelblue" size={24} />
+              <span>Agile & Scrum</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <BarChart className="text-steelblue" size={24} />
+              <span>Data Analysis</span>
             </div>
           </div>
         </div>
         
         <div className="space-y-6">
           <div className="bg-white rounded-lg shadow-sm p-6">
-            <h4 className="text-xl font-medium mb-4">Professional Experience</h4>
+            <h4 className="text-xl font-medium mb-4">Key Accomplishments</h4>
             <div className="space-y-4">
               <div className="flex items-start">
-                <Briefcase className="text-steelblue mr-3 mt-1" size={20} />
+                <CheckCircle className="text-steelblue mr-3 mt-1" size={20} />
                 <div>
-                  <h5 className="font-medium">Senior Business Analyst</h5>
-                  <p className="text-sm text-muted-foreground">Global Tech Solutions • 2020 - Present</p>
+                  <p className="text-muted-foreground">Achieved a <span className="font-medium text-foreground">95% stakeholder satisfaction rate</span> by collaborating effectively with cross-functional teams.</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <Briefcase className="text-steelblue mr-3 mt-1" size={20} />
+                <CheckCircle className="text-steelblue mr-3 mt-1" size={20} />
                 <div>
-                  <h5 className="font-medium">Business Analyst</h5>
-                  <p className="text-sm text-muted-foreground">Data Insights Inc. • 2017 - 2020</p>
+                  <p className="text-muted-foreground">Spearheaded requirements-gathering workshops with key stakeholders, enhancing project alignment.</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <Briefcase className="text-steelblue mr-3 mt-1" size={20} />
+                <CheckCircle className="text-steelblue mr-3 mt-1" size={20} />
                 <div>
-                  <h5 className="font-medium">Junior Analyst</h5>
-                  <p className="text-sm text-muted-foreground">Analytics Partners • 2015 - 2017</p>
+                  <p className="text-muted-foreground">Led acquisition of <span className="font-medium text-foreground">$2 million</span> in government relief funds during COVID-19, ensuring critical financial support.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-lg shadow-sm p-6">
+            <h4 className="text-xl font-medium mb-4">Education & Certification</h4>
+            <div className="space-y-3">
+              <div className="flex items-start">
+                <Award className="text-steelblue mr-3 mt-1" size={20} />
+                <div>
+                  <h5 className="font-medium">Certified Scrum Master (CSM)</h5>
+                  <p className="text-sm text-muted-foreground">2024</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <Award className="text-steelblue mr-3 mt-1" size={20} />
+                <div>
+                  <h5 className="font-medium">AWS Cloud Practitioner</h5>
+                  <p className="text-sm text-muted-foreground">2022</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <Award className="text-steelblue mr-3 mt-1" size={20} />
+                <div>
+                  <h5 className="font-medium">Associate's in Business Administration</h5>
+                  <p className="text-sm text-muted-foreground">NVCC, Annandale, VA</p>
                 </div>
               </div>
             </div>

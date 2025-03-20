@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, FileText } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -10,10 +10,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <h3 className="text-lg font-medium">
-              <span className="text-steelblue">Data</span>Analyst
+              <span className="text-steelblue">Certified</span>Analyst
             </h3>
             <p className="text-sm text-muted-foreground max-w-xs">
-              Business analyst focused on turning complex data into strategic insights and actionable recommendations.
+              Certified Scrum Master Business Analyst focused on driving business transformation through efficient processes and data-driven insights.
             </p>
           </div>
           
@@ -21,8 +21,11 @@ const Footer = () => {
             <h3 className="text-lg font-medium">Quick Links</h3>
             <nav className="flex flex-col space-y-2">
               <Link to="/" className="text-sm text-muted-foreground hover:text-steelblue transition-colors">Home</Link>
-              <Link to="/projects" className="text-sm text-muted-foreground hover:text-steelblue transition-colors">Projects</Link>
+              <Link to="/projects" className="text-sm text-muted-foreground hover:text-steelblue transition-colors">Experience</Link>
               <Link to="/contact" className="text-sm text-muted-foreground hover:text-steelblue transition-colors">Contact</Link>
+              <a href="#" className="text-sm text-muted-foreground hover:text-steelblue transition-colors inline-flex items-center">
+                <FileText size={14} className="mr-1" /> Resume
+              </a>
             </nav>
           </div>
           
@@ -43,7 +46,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-8 pt-8 border-t border-gray-100 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Business Analyst Portfolio. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Certified Scrum Master Business Analyst. All rights reserved.</p>
         </div>
       </div>
     </footer>

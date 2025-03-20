@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BarChart, TrendingUp, Database } from 'lucide-react';
+import { ArrowRight, FileCheck, Users, Zap, LineChart, BarChart, FileText } from 'lucide-react';
 
 const ProjectsPreview = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -31,32 +31,35 @@ const ProjectsPreview = () => {
   const featuredProjects = [
     {
       id: 1,
-      title: 'Retail Analytics Dashboard',
-      description: 'Developed a comprehensive dashboard to track sales performance, customer behavior, and inventory management.',
-      icon: <BarChart className="text-steelblue" size={24} />,
-      outcome: '32% increase in inventory turnover'
+      title: 'Healthcare EHR Implementation',
+      description: 'Led project planning, requirements gathering, and business process mapping for a seamless EHR system implementation.',
+      icon: <FileText className="text-steelblue" size={24} />,
+      outcome: 'DS Technologies Inc, 2024-2025',
+      company: 'DS Technologies Inc'
     },
     {
       id: 2,
-      title: 'Process Optimization Initiative',
-      description: 'Analyzed and redesigned order fulfillment process, reducing operational inefficiencies and improving customer satisfaction.',
-      icon: <TrendingUp className="text-steelblue" size={24} />,
-      outcome: '45% decrease in processing time'
+      title: 'Government IT Solutions',
+      description: 'Worked with cross-functional teams to ensure project alignment and reduce rework through detailed requirement documentation.',
+      icon: <Users className="text-steelblue" size={24} />,
+      outcome: '95% stakeholder satisfaction rate',
+      company: 'CACI'
     },
     {
       id: 3,
-      title: 'Data Warehouse Implementation',
-      description: 'Led the requirements gathering and design phase for a new enterprise data warehouse solution.',
-      icon: <Database className="text-steelblue" size={24} />,
-      outcome: 'Consolidated 7 data sources'
+      title: 'Financial Systems Integration',
+      description: 'Analyzed business challenges and translated them into system requirements, resulting in operational efficiency improvements.',
+      icon: <LineChart className="text-steelblue" size={24} />,
+      outcome: 'Automated solutions deployment',
+      company: 'Spectrum Financial Services'
     }
   ];
 
   return (
     <section ref={sectionRef} className="section-container">
       <div className="text-center mb-16">
-        <h2 className="text-sm uppercase tracking-wider text-steelblue mb-2">Portfolio</h2>
-        <h3 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h3>
+        <h2 className="text-sm uppercase tracking-wider text-steelblue mb-2">Experience</h2>
+        <h3 className="text-3xl md:text-4xl font-bold mb-4">Professional Journey</h3>
         <div className="h-1 w-16 bg-steelblue mx-auto"></div>
       </div>
       
@@ -90,7 +93,7 @@ const ProjectsPreview = () => {
       
       <div className="text-center mt-12">
         <Link to="/projects" className="btn-primary">
-          View All Projects
+          View Full Experience
         </Link>
       </div>
     </section>

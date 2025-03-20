@@ -3,98 +3,104 @@ import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ProjectDetail from '@/components/ProjectDetail';
-import { BarChart, TrendingUp, Database, AreaChart, Layers, LineChart } from 'lucide-react';
+import { FileText, Users, Database, LineChart, LayoutDashboard, ClipboardCheck } from 'lucide-react';
 
 const projects = [
   {
     id: 1,
-    title: 'Retail Analytics Dashboard',
-    description: 'Developed a comprehensive dashboard to track sales performance, customer behavior, and inventory management for a national retail chain.',
-    challenge: 'The client needed a centralized way to visualize store performance across 120 locations, with the ability to drill down into specific metrics and identify trends.',
-    solution: 'Designed and implemented a Tableau dashboard that integrated data from multiple sources, providing real-time insights into key performance indicators.',
+    title: 'Healthcare EHR Implementation - DS Technologies Inc',
+    description: 'Supported healthcare IT initiatives, specializing in system integration and Electronic Health Records (EHR) deployment.',
+    challenge: 'The healthcare organization needed a seamless integration of new EHR systems with existing infrastructure while ensuring minimal disruption to patient care and staff operations.',
+    solution: 'Led project planning, requirements gathering, and business process mapping to ensure smooth implementation. Collaborated with stakeholders and SMEs to develop workflows and identify integration points.',
     results: [
-      '32% increase in inventory turnover rate',
-      'Reduced stockouts by 45%',
-      'Optimized staffing based on customer traffic patterns',
-      'Saved over $500K annually through improved inventory management'
+      'Successfully deployed integrated EHR system',
+      'Resolved system capability gaps',
+      'Developed comprehensive test plans and UAT',
+      'Created user documentation and training materials'
     ],
-    tools: ['Tableau', 'SQL', 'Python', 'Excel'],
-    icon: <BarChart className="text-steelblue" size={24} />
+    tools: ['SQL', 'SDLC', 'Microsoft Visio', 'SharePoint', 'Teams'],
+    icon: <FileText className="text-steelblue" size={24} />,
+    date: 'July 2024 – February 2025'
   },
   {
     id: 2,
-    title: 'Process Optimization Initiative',
-    description: 'Analyzed and redesigned order fulfillment process, reducing operational inefficiencies and improving customer satisfaction.',
-    challenge: 'The organization was experiencing delays in order processing, resulting in customer complaints and decreased satisfaction ratings.',
-    solution: 'Conducted a thorough workflow analysis, identified bottlenecks, and implemented a streamlined process with automated notifications and improved handoffs.',
+    title: 'Government IT Solutions - CACI',
+    description: 'Provided IT solutions and services to government and commercial clients, focusing on innovation and efficiency as Senior Business Analyst.',
+    challenge: 'Needed to align diverse stakeholder requirements across multiple government departments while ensuring project delivery within strict timelines and compliance standards.',
+    solution: 'Collaborated with product managers, developers, and QA teams to ensure project alignment. Conducted requirement-gathering sessions and created detailed business requirement documents.',
     results: [
-      '45% decrease in order processing time',
-      'Improved customer satisfaction scores by 28%',
-      'Reduced error rates by 60%',
-      'Enabled employees to handle 35% more orders with the same resources'
+      'Achieved 95% stakeholder satisfaction rate',
+      'Reduced rework by 30%',
+      'Improved development cycle times by 15%',
+      'Successfully facilitated stakeholder workshops and UAT'
     ],
-    tools: ['Process Mapping', 'Six Sigma', 'Microsoft Visio', 'Power Automate'],
-    icon: <TrendingUp className="text-steelblue" size={24} />
+    tools: ['Agile', 'JIRA', 'Requirement Documentation', 'UAT', 'Stakeholder Management'],
+    icon: <Users className="text-steelblue" size={24} />,
+    date: 'May 2023 – June 2024'
   },
   {
     id: 3,
-    title: 'Data Warehouse Implementation',
-    description: 'Led the requirements gathering and design phase for a new enterprise data warehouse solution.',
-    challenge: 'The company was struggling with siloed data across multiple systems, making it difficult to perform cross-functional analysis and reporting.',
-    solution: 'Designed a comprehensive data warehouse architecture that consolidated information from 7 disparate systems, creating a single source of truth for business intelligence.',
+    title: 'Financial Systems Analysis - Spectrum Financial Services',
+    description: 'Offered financial and operational solutions, enhancing efficiency through technology and process improvements as Business Systems Analyst.',
+    challenge: 'The financial services firm needed to modernize legacy systems while ensuring compliance with evolving regulatory requirements and maintaining operational continuity.',
+    solution: 'Analyzed key business challenges and translated them into system requirements. Created technical documentation to facilitate clear communication and effective system implementation.',
     results: [
-      'Consolidated 7 separate data sources into a unified platform',
-      'Reduced report generation time from days to minutes',
-      'Enabled self-service analytics for business users',
-      'Improved data quality and consistency across the organization'
+      'Improved operational efficiency through automated solutions',
+      'Created comprehensive technical documentation',
+      'Conducted extensive system testing',
+      'Ensured regulatory compliance across systems'
     ],
-    tools: ['SQL Server', 'SSIS', 'Power BI', 'Data Modeling'],
-    icon: <Database className="text-steelblue" size={24} />
+    tools: ['Financial Systems', 'Process Analysis', 'Technical Documentation', 'Compliance Management'],
+    icon: <LineChart className="text-steelblue" size={24} />,
+    date: 'July 2022 – May 2023'
   },
   {
     id: 4,
-    title: 'Sales Forecasting Model',
-    description: 'Developed a predictive model to forecast quarterly sales figures with improved accuracy.',
-    challenge: 'The business was using basic historical averaging to forecast sales, resulting in significant variance between projections and actual results.',
-    solution: 'Created a machine learning model incorporating seasonal patterns, market trends, and external factors to generate more accurate forecasts.',
+    title: 'Property Management Systems - CIM Group',
+    description: 'Focused on property management systems and operational efficiency for real estate portfolios as Business Systems Support Analyst.',
+    challenge: 'The real estate management company needed to optimize property management systems to handle a growing portfolio while improving reporting capabilities and operational efficiency.',
+    solution: 'Conducted comprehensive analysis of property management systems to identify inefficiencies and implement solutions that enhanced performance.',
     results: [
-      'Improved forecast accuracy by 37%',
-      'Reduced inventory holding costs by $320K annually',
-      'Optimized procurement and staffing based on improved forecasts',
-      'Implemented automated monthly forecast updates'
+      'Enhanced system performance across property portfolio',
+      'Served as liaison between business users and technical teams',
+      'Translated requirements into technical specifications',
+      'Provided ongoing support and troubleshooting'
     ],
-    tools: ['Python', 'Scikit-learn', 'Pandas', 'Jupyter Notebooks'],
-    icon: <AreaChart className="text-steelblue" size={24} />
+    tools: ['Property Management Systems', 'Requirements Analysis', 'Technical Support', 'System Integration'],
+    icon: <Database className="text-steelblue" size={24} />,
+    date: 'June 2020 – July 2022'
   },
   {
     id: 5,
-    title: 'Regulatory Compliance Dashboard',
-    description: 'Designed a real-time compliance monitoring system for a financial services firm.',
-    challenge: 'The organization needed to track compliance with multiple regulatory requirements and quickly identify potential issues before they resulted in penalties.',
-    solution: 'Developed a dashboard that automatically monitored key compliance indicators and alerted relevant stakeholders when metrics approached threshold levels.',
+    title: 'Residential Portfolio Management - Bell Partners',
+    description: 'Managed leasing operations and property financial health for residential portfolios as Senior Leasing Manager.',
+    challenge: 'The residential property management company needed to optimize leasing operations, improve financial performance, and develop standardized processes across a diverse portfolio.',
+    solution: 'Streamlined financial transactions such as rent collection and banking while safeguarding property assets. Monitored financial health against annual budgets.',
     results: [
-      'Eliminated compliance-related penalties over a 2-year period',
-      'Reduced audit preparation time by 65%',
-      'Improved regulatory reporting efficiency',
-      'Enhanced visibility into compliance status across the organization'
+      'Improved budgeted NOI through strategic management',
+      'Mentored leasing teams to high performance',
+      'Implemented standardized rental policies',
+      'Tracked and improved key performance metrics'
     ],
-    tools: ['Power BI', 'SQL', 'Azure Functions', 'Teams Integration'],
-    icon: <Layers className="text-steelblue" size={24} />
+    tools: ['Financial Analysis', 'Team Leadership', 'Performance Metrics', 'Operational Management'],
+    icon: <LayoutDashboard className="text-steelblue" size={24} />,
+    date: 'May 2018 – June 2020'
   },
   {
     id: 6,
-    title: 'Customer Segmentation Analysis',
-    description: 'Performed advanced customer segmentation to improve marketing targeting and effectiveness.',
-    challenge: 'The marketing team was using broad demographic categories for campaigns, resulting in poor conversion rates and inefficient marketing spend.',
-    solution: 'Conducted cluster analysis using behavioral, transactional, and demographic data to identify distinct customer segments with specific needs and preferences.',
+    title: 'COVID-19 Relief Fund Acquisition',
+    description: 'Led the successful acquisition of $2 million in government relief funds during the COVID-19 pandemic.',
+    challenge: 'During the uncertainty of the COVID-19 pandemic, there was an urgent need to secure financial support for residents and maintain operational stability across a large community.',
+    solution: 'Managed a complex application process for government relief funds, coordinating documentation requirements and navigating evolving federal guidelines.',
     results: [
-      'Identified 5 high-value customer segments for targeted marketing',
-      'Increased email campaign conversion rates by 45%',
-      'Reduced customer acquisition costs by 28%',
-      'Improved customer retention rates in key segments'
+      'Secured $2 million in relief funding',
+      'Provided critical financial support for residents',
+      'Maintained operational stability during crisis',
+      'Implemented efficient fund distribution system'
     ],
-    tools: ['R', 'RStudio', 'Cluster Analysis', 'Excel'],
-    icon: <LineChart className="text-steelblue" size={24} />
+    tools: ['Grant Applications', 'Government Relations', 'Crisis Management', 'Financial Planning'],
+    icon: <ClipboardCheck className="text-steelblue" size={24} />,
+    date: '2020'
   }
 ];
 
@@ -131,9 +137,9 @@ const Projects = () => {
       <section className="pt-32 pb-16 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Projects Portfolio</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Professional Experience</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              A showcase of my work in data analysis, process optimization, and strategic problem-solving.
+              A journey through my career in business analysis, process optimization, and system implementation.
             </p>
           </div>
           
@@ -148,6 +154,7 @@ const Projects = () => {
                 solution={project.solution}
                 results={project.results}
                 tools={project.tools}
+                date={project.date}
               />
             ))}
           </div>
