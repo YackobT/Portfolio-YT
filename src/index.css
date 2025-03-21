@@ -108,7 +108,7 @@
   }
 
   .split-text {
-    @apply relative inline-block transform transition-transform duration-600 ease-out;
+    @apply relative inline-block transform transition-transform duration-500 ease-out;
     transform: translateY(100%);
   }
 
