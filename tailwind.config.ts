@@ -57,9 +57,9 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				purple: '#9b87f5',
-				darkpurple: '#7E69AB',
-				steelblue: '#4682B4',
+				purple: '#5D3BEE',
+				darkpurple: '#4327B1',
+				violet: '#8362F2',
 				charcoal: '#36454F'
 			},
 			borderRadius: {
@@ -68,7 +68,7 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				sans: ['Inter', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
+				sans: ['Space Grotesk', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
 			},
 			keyframes: {
 				'accordion-down': {

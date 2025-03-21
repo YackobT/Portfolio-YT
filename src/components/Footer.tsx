@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Mail, FileText } from 'lucide-react';
+import { Github, Linkedin, Mail, FileText, MapPin, Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -36,10 +36,10 @@ const Footer = () => {
                 <Mail size={16} className="mr-2" /> yackobt@yahoo.com
               </a>
               <p className="text-sm text-muted-foreground flex items-center">
-                <Github size={16} className="mr-2" /> Arlington, VA 22204, USA
+                <MapPin size={16} className="mr-2" /> Arlington, VA 22204, USA
               </p>
               <a href="tel:+15712765218" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center">
-                <Linkedin size={16} className="mr-2" /> (571) 276-5218
+                <Phone size={16} className="mr-2" /> (571) 276-5218
               </a>
             </div>
             <div className="flex space-x-4 mt-4">

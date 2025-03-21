@@ -34,8 +34,8 @@ const Navbar = () => {
       )}
     >
       <div className="container mx-auto px-4 md:px-10 flex items-center justify-between">
-        <Link to="/" className="text-xl font-medium tracking-tight transition-colors duration-300 hover:text-steelblue flex items-center">
-          <span className="text-steelblue font-bold mr-1">Certified</span>
+        <Link to="/" className="text-xl font-medium tracking-tight transition-colors duration-300 hover:text-primary flex items-center">
+          <span className="text-primary font-bold mr-1">Certified</span>
           <span>Analyst</span>
         </Link>
 
@@ -60,7 +60,7 @@ const Navbar = () => {
             </Link>
             <a 
               href="#" 
-              className="px-4 py-2 border border-steelblue text-steelblue rounded-md hover:bg-steelblue hover:text-white transition-colors duration-300 inline-flex items-center"
+              className="px-4 py-2 border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition-colors duration-300 inline-flex items-center"
             >
               <FileText size={16} className="mr-2" /> Resume
             </a>
@@ -76,13 +76,13 @@ const Navbar = () => {
             )}
           >
             <nav className="flex flex-col py-4">
-              <Link to="/" className={cn('px-6 py-3 hover:bg-gray-50', isActive('/') && 'text-steelblue')}>
+              <Link to="/" className={cn('px-6 py-3 hover:bg-gray-50', isActive('/') && 'text-primary')}>
                 Home
               </Link>
-              <Link to="/projects" className={cn('px-6 py-3 hover:bg-gray-50', isActive('/projects') && 'text-steelblue')}>
+              <Link to="/projects" className={cn('px-6 py-3 hover:bg-gray-50', isActive('/projects') && 'text-primary')}>
                 Experience
               </Link>
-              <Link to="/contact" className={cn('px-6 py-3 hover:bg-gray-50', isActive('/contact') && 'text-steelblue')}>
+              <Link to="/contact" className={cn('px-6 py-3 hover:bg-gray-50', isActive('/contact') && 'text-primary')}>
                 Contact
               </Link>
               <a href="#" className={cn('px-6 py-3 hover:bg-gray-50 flex items-center')}>
