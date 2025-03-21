@@ -35,8 +35,8 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-10 flex items-center justify-between">
         <Link to="/" className="text-xl font-medium tracking-tight transition-colors duration-300 hover:text-primary flex items-center">
-          <span className="text-primary font-bold mr-1">Certified</span>
-          <span>Analyst</span>
+          <span className="text-primary font-medium mr-1">Yackob</span>
+          <span>Tamire</span>
         </Link>
 
         {isMobile ? (

@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -107,12 +108,13 @@
   }
 
   .split-text {
-    @apply relative inline-block transform transition-transform duration-300 ease-out;
+    @apply relative inline-block transform transition-transform duration-600 ease-out;
     transform: translateY(100%);
   }
 
   .visible .split-text {
     transform: translateY(0);
+    transition-duration: 800ms;
   }
 
   .highlight {
@@ -153,4 +155,32 @@
 .cursor-dot {
   @apply fixed w-4 h-4 rounded-full bg-primary/50 pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2 mix-blend-difference;
   transition: transform 0.2s ease-out;
+}
+
+.minimal-section {
+  @apply py-32 md:py-40;
+}
+
+.minimal-container {
+  @apply max-w-5xl mx-auto px-4 md:px-8;
+}
+
+.minimal-heading {
+  @apply text-4xl md:text-6xl font-medium tracking-tight;
+}
+
+.minimal-subheading {
+  @apply text-xl md:text-2xl text-muted-foreground;
+}
+
+.grid-layout {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12;
+}
+
+.border-card {
+  @apply border border-gray-200 p-6 rounded-xl transition-all hover:border-primary/30;
+}
+
+.smooth-fade {
+  @apply transition-all duration-500 ease-in-out;
 }

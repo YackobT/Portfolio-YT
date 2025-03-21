@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="space-y-4">
             <h3 className="text-lg font-medium tracking-tight">
-              <span className="text-primary font-bold">Certified</span>Analyst
+              <span className="text-primary font-medium">Yackob</span> Tamire
             </h3>
             <p className="text-sm text-muted-foreground max-w-xs">
               Impact-focused Business Systems Analyst driving business transformation through efficient processes and data-driven insights.
@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-12 pt-6 border-t border-gray-100 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Certified Scrum Master Business Analyst. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Yackob Tamire. All rights reserved.</p>
         </div>
       </div>
     </footer>
