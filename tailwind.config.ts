@@ -57,6 +57,8 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				purple: '#9b87f5',
+				darkpurple: '#7E69AB',
 				steelblue: '#4682B4',
 				charcoal: '#36454F'
 			},

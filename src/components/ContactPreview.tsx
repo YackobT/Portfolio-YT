@@ -29,7 +29,7 @@ const ContactPreview = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 md:py-32 bg-steelblue text-white">
+    <section ref={sectionRef} className="py-20 md:py-32 bg-primary text-white">
       <div className="container mx-auto px-4 md:px-10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-6">Ready to Optimize Your Business?</h2>
@@ -42,19 +42,19 @@ const ContactPreview = () => {
             <div className="glass bg-white/10 p-6 rounded-lg transition-transform hover:translate-y-[-5px] duration-300">
               <Mail className="mx-auto mb-4" size={28} />
               <h3 className="text-lg font-medium mb-2">Email</h3>
-              <p className="text-white/80">contact@example.com</p>
+              <p className="text-white/80">yackobt@yahoo.com</p>
             </div>
             
             <div className="glass bg-white/10 p-6 rounded-lg transition-transform hover:translate-y-[-5px] duration-300">
               <Phone className="mx-auto mb-4" size={28} />
               <h3 className="text-lg font-medium mb-2">Phone</h3>
-              <p className="text-white/80">+1 (555) 123-4567</p>
+              <p className="text-white/80">(571) 276-5218</p>
             </div>
             
             <div className="glass bg-white/10 p-6 rounded-lg transition-transform hover:translate-y-[-5px] duration-300">
               <MapPin className="mx-auto mb-4" size={28} />
               <h3 className="text-lg font-medium mb-2">Location</h3>
-              <p className="text-white/80">Richmond, VA</p>
+              <p className="text-white/80">Arlington, VA 22204</p>
             </div>
             
             <div className="glass bg-white/10 p-6 rounded-lg transition-transform hover:translate-y-[-5px] duration-300">
@@ -66,7 +66,7 @@ const ContactPreview = () => {
           
           <Link 
             to="/contact" 
-            className="px-8 py-3 bg-white text-steelblue rounded-md transition-all duration-300 hover:bg-opacity-90 inline-block font-medium group"
+            className="px-8 py-3 bg-white text-primary rounded-md transition-all duration-300 hover:bg-opacity-90 inline-block font-medium group"
           >
             Get in Touch
             <svg className="ml-2 w-4 h-4 inline-block transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
