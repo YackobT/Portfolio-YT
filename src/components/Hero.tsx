@@ -7,21 +7,9 @@ const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      },
-      { threshold: 0.1 }
-    );
-
+    // Make text visible immediately on load rather than waiting for intersection
     const elements = document.querySelectorAll('.split-text-container');
-    elements.forEach(el => observer.observe(el));
-
-    return () => {
-      elements.forEach(el => observer.unobserve(el));
-    };
+    elements.forEach(el => el.classList.add('visible'));
   }, []);
 
   const scrollToNextSection = () => {
@@ -41,39 +29,39 @@ const Hero = () => {
       
       <div ref={containerRef} className="container mx-auto px-4 md:px-10 lg:px-20 py-20 md:py-32 relative z-10">
         <div className="max-w-4xl">
-          <div className="split-text-container overflow-hidden mb-4">
-            <div className="split-text delay-100 text-sm uppercase tracking-widest font-medium text-primary">
+          <div className="split-text-container visible overflow-hidden mb-4">
+            <div className="split-text text-sm uppercase tracking-widest font-medium text-primary">
               Certified Scrum Master
             </div>
           </div>
           
           <div className="space-y-2 mb-8">
-            <div className="split-text-container">
-              <h1 className="split-text delay-200 text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight">
+            <div className="split-text-container visible">
+              <h1 className="split-text text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight">
                 Impact-focused
               </h1>
             </div>
-            <div className="split-text-container">
-              <h1 className="split-text delay-300 text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight">
+            <div className="split-text-container visible">
+              <h1 className="split-text text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight">
                 <span className="highlight">Business Analyst</span>
               </h1>
             </div>
-            <div className="split-text-container">
-              <h1 className="split-text delay-400 text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight">
+            <div className="split-text-container visible">
+              <h1 className="split-text text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight">
                 & Problem Solver
               </h1>
             </div>
           </div>
           
-          <div className="split-text-container max-w-2xl mb-12">
-            <p className="split-text delay-500 text-xl text-muted-foreground">
+          <div className="split-text-container visible max-w-2xl mb-12">
+            <p className="split-text text-xl text-muted-foreground">
               Crafting solutions that cut process times by 20% and boost efficiency. 
               Skilled in Agile, SDLC, and tools like Visio, JIRA, and Trello.
             </p>
           </div>
           
-          <div className="split-text-container">
-            <div className="split-text delay-600 flex flex-col sm:flex-row gap-6 mt-8">
+          <div className="split-text-container visible">
+            <div className="split-text flex flex-col sm:flex-row gap-6 mt-8">
               <Link 
                 to="/projects" 
                 className="btn-primary inline-flex items-center group bg-primary" 
