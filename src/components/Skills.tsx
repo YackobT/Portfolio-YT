@@ -69,7 +69,6 @@ const Skills = () => {
                 <div key={`tech-${index}`} className="space-y-2">
                   <div className="flex justify-between">
                     <span className="font-medium">{skill.name}</span>
-                    <span className="text-steelblue">{skill.level}%</span>
                   </div>
                   <div className="skill-bar">
                     <div 
@@ -93,7 +92,6 @@ const Skills = () => {
                 <div key={`biz-${index}`} className="space-y-2">
                   <div className="flex justify-between">
                     <span className="font-medium">{skill.name}</span>
-                    <span className="text-steelblue">{skill.level}%</span>
                   </div>
                   <div className="skill-bar">
                     <div 

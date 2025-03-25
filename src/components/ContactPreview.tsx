@@ -42,7 +42,7 @@ const ContactPreview = () => {
             <div className="glass bg-white/10 p-6 rounded-lg transition-transform hover:translate-y-[-5px] duration-300">
               <Mail className="mx-auto mb-4" size={28} />
               <h3 className="text-lg font-medium mb-2">Email</h3>
-              <p className="text-white/80">yackobt@yahoo.com</p>
+              <p className="text-white/80 break-words">yackobt@yahoo.com</p>
             </div>
             
             <div className="glass bg-white/10 p-6 rounded-lg transition-transform hover:translate-y-[-5px] duration-300">
