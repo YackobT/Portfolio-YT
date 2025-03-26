@@ -1,6 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { CheckCircle, Briefcase, Award, Gauge, Users, BarChart } from 'lucide-react';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const About = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -37,6 +38,12 @@ const About = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
+          <div className="flex flex-col items-center md:items-start mb-6">
+            <Avatar className="h-24 w-24 mb-4">
+              <AvatarImage src="/lovable-uploads/245c5adf-0f4c-436e-82a9-1a7ea95a9b35.png" alt="Yackob Tamire" />
+              <AvatarFallback>YT</AvatarFallback>
+            </Avatar>
+          </div>
           <p className="text-lg leading-relaxed">
             As a Certified Scrum Master Business Analyst with over 5 years of experience, I specialize in creating solutions that streamline processes, enhance efficiency, and align with business objectives.
           </p>

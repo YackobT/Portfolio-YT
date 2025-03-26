@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { ArrowDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -36,9 +37,15 @@ const Hero = () => {
       
       <div ref={containerRef} className="container mx-auto px-4 md:px-10 lg:px-20 py-20 md:py-32 relative z-10">
         <div className="max-w-4xl">
-          <div className="split-text-container overflow-hidden mb-4">
-            <div className="split-text text-sm uppercase tracking-widest font-medium text-primary">
-              Certified Scrum Master
+          <div className="flex items-center gap-6 mb-8">
+            <Avatar className="h-24 w-24 border-2 border-primary/20">
+              <AvatarImage src="/lovable-uploads/245c5adf-0f4c-436e-82a9-1a7ea95a9b35.png" alt="Yackob Tamire" />
+              <AvatarFallback>YT</AvatarFallback>
+            </Avatar>
+            <div className="split-text-container overflow-hidden">
+              <div className="split-text text-sm uppercase tracking-widest font-medium text-primary">
+                Certified Scrum Master
+              </div>
             </div>
           </div>
           

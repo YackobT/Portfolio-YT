@@ -1,7 +1,8 @@
 
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, MapPin, Phone, FileText } from 'lucide-react';
+import { Mail, FileText } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const ContactPreview = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -38,23 +39,11 @@ const ContactPreview = () => {
             and system implementation can help your organization achieve its goals.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             <div className="glass bg-white/10 p-6 rounded-lg transition-transform hover:translate-y-[-5px] duration-300">
               <Mail className="mx-auto mb-4" size={28} />
               <h3 className="text-lg font-medium mb-2">Email</h3>
               <p className="text-white/80 break-words">yackobt@yahoo.com</p>
-            </div>
-            
-            <div className="glass bg-white/10 p-6 rounded-lg transition-transform hover:translate-y-[-5px] duration-300">
-              <Phone className="mx-auto mb-4" size={28} />
-              <h3 className="text-lg font-medium mb-2">Phone</h3>
-              <p className="text-white/80">(571) 276-5218</p>
-            </div>
-            
-            <div className="glass bg-white/10 p-6 rounded-lg transition-transform hover:translate-y-[-5px] duration-300">
-              <MapPin className="mx-auto mb-4" size={28} />
-              <h3 className="text-lg font-medium mb-2">Location</h3>
-              <p className="text-white/80">Arlington, VA 22204</p>
             </div>
             
             <div className="glass bg-white/10 p-6 rounded-lg transition-transform hover:translate-y-[-5px] duration-300">

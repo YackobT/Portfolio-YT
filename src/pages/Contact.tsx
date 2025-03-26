@@ -3,7 +3,9 @@ import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
-import { Mail, Github, Linkedin, MapPin, Phone, Calendar } from 'lucide-react';
+import { Mail, Github, Linkedin, Calendar } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Contact = () => {
   useEffect(() => {
@@ -31,6 +33,17 @@ const Contact = () => {
             
             <div className="space-y-6">
               <div className="bg-white rounded-lg shadow-sm p-6">
+                <div className="flex items-center mb-6">
+                  <Avatar className="h-14 w-14 mr-4">
+                    <AvatarImage src="/lovable-uploads/245c5adf-0f4c-436e-82a9-1a7ea95a9b35.png" alt="Yackob Tamire" />
+                    <AvatarFallback>YT</AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <h3 className="text-xl font-medium">Yackob Tamire</h3>
+                    <p className="text-muted-foreground">Business Systems Analyst</p>
+                  </div>
+                </div>
+                
                 <h3 className="text-xl font-medium mb-4">Contact Information</h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
@@ -40,24 +53,6 @@ const Contact = () => {
                       <a href="mailto:yackobt@yahoo.com" className="text-primary hover:underline">
                         yackobt@yahoo.com
                       </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <Phone className="text-primary mr-3 mt-1" size={20} />
-                    <div>
-                      <h4 className="font-medium">Phone</h4>
-                      <a href="tel:+15712765218" className="text-primary hover:underline">
-                        (571) 276-5218
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <MapPin className="text-primary mr-3 mt-1" size={20} />
-                    <div>
-                      <h4 className="font-medium">Location</h4>
-                      <p className="text-muted-foreground">Arlington, VA 22204, USA</p>
                     </div>
                   </div>
                   
@@ -74,31 +69,60 @@ const Contact = () => {
               <div className="bg-white rounded-lg shadow-sm p-6">
                 <h3 className="text-xl font-medium mb-4">Connect</h3>
                 <div className="flex space-x-4">
-                  <a 
-                    href="https://github.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-full bg-gray-100 hover:bg-primary hover:text-white transition-colors"
-                    aria-label="GitHub"
-                  >
-                    <Github size={20} />
-                  </a>
-                  <a 
-                    href="https://linkedin.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-full bg-gray-100 hover:bg-primary hover:text-white transition-colors"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin size={20} />
-                  </a>
-                  <a 
-                    href="mailto:yackobt@yahoo.com"
-                    className="p-2 rounded-full bg-gray-100 hover:bg-primary hover:text-white transition-colors"
-                    aria-label="Email"
-                  >
-                    <Mail size={20} />
-                  </a>
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <a 
+                          href="https://github.com" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="p-2 rounded-full bg-gray-100 hover:bg-primary hover:text-white transition-colors"
+                          aria-label="GitHub"
+                        >
+                          <Github size={20} />
+                        </a>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>GitHub</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                  
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <a 
+                          href="https://www.linkedin.com/in/yackob-tamire/" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="p-2 rounded-full bg-gray-100 hover:bg-primary hover:text-white transition-colors"
+                          aria-label="LinkedIn"
+                        >
+                          <Linkedin size={20} />
+                        </a>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>LinkedIn</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                  
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <a 
+                          href="mailto:yackobt@yahoo.com"
+                          className="p-2 rounded-full bg-gray-100 hover:bg-primary hover:text-white transition-colors"
+                          aria-label="Email"
+                        >
+                          <Mail size={20} />
+                        </a>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Email</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
                 </div>
               </div>
             </div>

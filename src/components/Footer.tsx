@@ -1,7 +1,9 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Mail, FileText, MapPin, Phone } from 'lucide-react';
+import { Github, Linkedin, Mail, FileText } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Footer = () => {
   return (
@@ -9,9 +11,15 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-10 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="space-y-4">
-            <h3 className="text-lg font-medium tracking-tight">
-              <span className="text-primary font-medium">Yackob</span> Tamire
-            </h3>
+            <div className="flex items-center gap-3">
+              <Avatar className="h-12 w-12">
+                <AvatarImage src="/lovable-uploads/245c5adf-0f4c-436e-82a9-1a7ea95a9b35.png" alt="Yackob Tamire" />
+                <AvatarFallback>YT</AvatarFallback>
+              </Avatar>
+              <h3 className="text-lg font-medium tracking-tight">
+                <span className="text-primary font-medium">Yackob</span> Tamire
+              </h3>
+            </div>
             <p className="text-sm text-muted-foreground max-w-xs">
               Impact-focused Business Systems Analyst driving business transformation through efficient processes and data-driven insights.
             </p>
@@ -35,23 +43,46 @@ const Footer = () => {
               <a href="mailto:yackobt@yahoo.com" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center">
                 <Mail size={16} className="mr-2" /> yackobt@yahoo.com
               </a>
-              <p className="text-sm text-muted-foreground flex items-center">
-                <MapPin size={16} className="mr-2" /> Arlington, VA 22204, USA
-              </p>
-              <a href="tel:+15712765218" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center">
-                <Phone size={16} className="mr-2" /> (571) 276-5218
-              </a>
             </div>
             <div className="flex space-x-4 mt-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors" aria-label="GitHub">
-                <Github size={20} />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors" aria-label="LinkedIn">
-                <Linkedin size={20} />
-              </a>
-              <a href="mailto:yackobt@yahoo.com" className="text-gray-500 hover:text-primary transition-colors" aria-label="Email">
-                <Mail size={20} />
-              </a>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors" aria-label="GitHub">
+                      <Github size={20} />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>GitHub</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a href="https://www.linkedin.com/in/yackob-tamire/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors" aria-label="LinkedIn">
+                      <Linkedin size={20} />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>LinkedIn</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a href="mailto:yackobt@yahoo.com" className="text-gray-500 hover:text-primary transition-colors" aria-label="Email">
+                      <Mail size={20} />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Email</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </div>
           </div>
         </div>
