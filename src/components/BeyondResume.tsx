@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { Tv, Gamepad2, Brush } from 'lucide-react';
+import { Tv, Gamepad2, Brush, Laptop } from 'lucide-react';
 
 const BeyondResume = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -35,7 +35,15 @@ const BeyondResume = () => {
         <div className="h-1 w-16 bg-primary mx-auto"></div>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="bg-white rounded-lg shadow-sm p-6 transition-all duration-300 hover:shadow-md hover:translate-y-[-5px]">
+          <Laptop className="text-primary mb-4" size={28} />
+          <h4 className="text-xl font-medium mb-3">Technology Research</h4>
+          <p className="text-muted-foreground">
+            I love discovering new techs, practicing with them, and I would spend hours learning them and seeing how they could benefit me or my work.
+          </p>
+        </div>
+        
         <div className="bg-white rounded-lg shadow-sm p-6 transition-all duration-300 hover:shadow-md hover:translate-y-[-5px]">
           <Tv className="text-primary mb-4" size={28} />
           <h4 className="text-xl font-medium mb-3">Naruto's #1 Ramen Stan</h4>
