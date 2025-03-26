@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, FileText } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/hooks/use-mobile';
 
@@ -58,12 +58,6 @@ const Navbar = () => {
             <Link to="/contact" className={cn('nav-link', isActive('/contact') && 'active')}>
               Contact
             </Link>
-            <a 
-              href="#" 
-              className="px-4 py-2 border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition-colors duration-300 inline-flex items-center"
-            >
-              <FileText size={16} className="mr-2" /> Resume
-            </a>
           </nav>
         )}
 
@@ -85,9 +79,6 @@ const Navbar = () => {
               <Link to="/contact" className={cn('px-6 py-3 hover:bg-gray-50', isActive('/contact') && 'text-primary')}>
                 Contact
               </Link>
-              <a href="#" className={cn('px-6 py-3 hover:bg-gray-50 flex items-center')}>
-                <FileText size={16} className="mr-2" /> Resume
-              </a>
             </nav>
           </div>
         )}
