@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, FileText } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const ContactPreview = () => {
@@ -39,18 +39,10 @@ const ContactPreview = () => {
             and system implementation can help your organization achieve its goals.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            <div className="glass bg-white/10 p-6 rounded-lg transition-transform hover:translate-y-[-5px] duration-300">
-              <Mail className="mx-auto mb-4" size={28} />
-              <h3 className="text-lg font-medium mb-2">Email</h3>
-              <p className="text-white/80 break-words">yackobt@yahoo.com</p>
-            </div>
-            
-            <div className="glass bg-white/10 p-6 rounded-lg transition-transform hover:translate-y-[-5px] duration-300">
-              <FileText className="mx-auto mb-4" size={28} />
-              <h3 className="text-lg font-medium mb-2">Resume</h3>
-              <a href="#" className="text-white/80 hover:text-white hover:underline">Download PDF</a>
-            </div>
+          <div className="glass bg-white/10 p-6 rounded-lg transition-transform hover:translate-y-[-5px] duration-300 mb-12">
+            <Mail className="mx-auto mb-4" size={28} />
+            <h3 className="text-lg font-medium mb-2">Email</h3>
+            <p className="text-white/80 break-words">yackobt@yahoo.com</p>
           </div>
           
           <Link 

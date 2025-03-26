@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Mail, FileText } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
@@ -31,9 +31,6 @@ const Footer = () => {
               <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">Home</Link>
               <Link to="/projects" className="text-sm text-muted-foreground hover:text-primary transition-colors">Experience</Link>
               <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">Contact</Link>
-              <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center">
-                <FileText size={14} className="mr-1" /> Resume
-              </a>
             </nav>
           </div>
           
