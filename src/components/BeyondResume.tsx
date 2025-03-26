@@ -38,9 +38,9 @@ const BeyondResume = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="bg-white rounded-lg shadow-sm p-6 transition-all duration-300 hover:shadow-md hover:translate-y-[-5px]">
           <Laptop className="text-primary mb-4" size={28} />
-          <h4 className="text-xl font-medium mb-3">Technology Research</h4>
+          <h4 className="text-xl font-medium mb-3">Tech Exploration</h4>
           <p className="text-muted-foreground">
-            I love discovering new techs, practicing with them, and I would spend hours learning them and seeing how they could benefit me or my work.
+            I'm a geek for new gadgets and tools—diving in, messing around, and losing track of time figuring out how they work. I'm always hunting for ways they can level up my life or my projects.
           </p>
         </div>
         
